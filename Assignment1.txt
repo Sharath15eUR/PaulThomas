@@ -1,0 +1,354 @@
+Assignment answers
+
+
+
+
+Answer1:
+[manjaro@manjaro Desktop]$ mkdir Assignment_1
+[manjaro@manjaro Desktop]$ cd Assignment_1/
+[manjaro@manjaro Assignment_1]$ touch file
+[manjaro@manjaro Assignment_1]$ ls
+file
+[manjaro@manjaro Assignment_1]$ ls -lrt
+total 0
+-rw-r--r-- 1 manjaro manjaro 0 Jan 23 17:05 file
+[manjaro@manjaro Assignment_1]$ chmod ugo+x file
+[manjaro@manjaro Assignment_1]$ ls -lrt
+total 0
+-rwxr-xr-x 1 manjaro manjaro 0 Jan 23 17:05 file
+
+
+
+
+Answer 2:
+[manjaro@manjaro Assignment_1]$ chmod g-w file
+[manjaro@manjaro Assignment_1]$ ls -lrt
+total 0
+-rwxr-xr-x 1 manjaro manjaro 0 Jan 23 17:05 file
+
+
+
+
+
+Answer 3:
+[manjaro@manjaro Assignment_1]$ mkdir dir1
+[manjaro@manjaro Assignment_1]$ cd dir1/
+[manjaro@manjaro dir1]$ mkdir dir2
+[manjaro@manjaro dir1]$ cd dir2
+[manjaro@manjaro dir2]$ touch file1.txt
+[manjaro@manjaro dir2]$ ls
+file1.txt
+[manjaro@manjaro dir2]$ cd ../
+[manjaro@manjaro dir1]$ ln -s dir2/file1.txt file_link
+[manjaro@manjaro dir1]$ ls
+dir2  file_link
+[manjaro@manjaro dir1]$ cat file_link 
+
+
+
+Answer 4:
+[manjaro@manjaro dir1]$ cd ..
+[manjaro@manjaro Assignment_1]$ ps
+    PID TTY          TIME CMD
+   2702 pts/0    00:00:00 bash
+   2809 pts/0    00:00:00 ps
+[manjaro@manjaro Assignment_1]$ ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3 117440 11624 ?        Ss   04:24   0:03 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    04:24   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   04:24   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   04:24   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   04:24   0:00 [kworker/0:0H
+root           8  0.0  0.0      0     0 ?        I<   04:24   0:00 [mm_percpu_wq
+root           9  0.0  0.0      0     0 ?        S    04:24   0:00 [ksoftirqd/0]
+root          10  0.0  0.0      0     0 ?        S    04:24   0:00 [rcuc/0]
+root          11  0.0  0.0      0     0 ?        I    04:24   0:00 [rcu_preempt]
+root          12  0.0  0.0      0     0 ?        S    04:24   0:00 [rcub/0]
+root          13  0.0  0.0      0     0 ?        S    04:24   0:00 [migration/0]
+root          14  0.0  0.0      0     0 ?        S    04:24   0:00 [idle_inject/
+root          16  0.0  0.0      0     0 ?        S    04:24   0:00 [cpuhp/0]
+root          17  0.0  0.0      0     0 ?        S    04:24   0:00 [kdevtmpfs]
+root          18  0.0  0.0      0     0 ?        I<   04:24   0:00 [netns]
+root          19  0.0  0.0      0     0 ?        S    04:24   0:00 [rcu_tasks_kt
+root          20  0.0  0.0      0     0 ?        S    04:24   0:00 [kauditd]
+root          21  0.0  0.0      0     0 ?        S    04:24   0:00 [khungtaskd]
+root          22  0.0  0.0      0     0 ?        S    04:24   0:00 [oom_reaper]
+root          23  0.0  0.0      0     0 ?        I<   04:24   0:00 [writeback]
+root          24  0.0  0.0      0     0 ?        S    04:24   0:00 [kcompactd0]
+root          25  0.0  0.0      0     0 ?        SN   04:24   0:00 [ksmd]
+root          26  0.0  0.0      0     0 ?        SN   04:24   0:00 [khugepaged]
+root         114  0.0  0.0      0     0 ?        I<   04:24   0:00 [kintegrityd]
+root         115  0.0  0.0      0     0 ?        I<   04:24   0:00 [kblockd]
+root         116  0.0  0.0      0     0 ?        I<   04:24   0:00 [blkcg_punt_b
+root         117  0.0  0.0      0     0 ?        I<   04:24   0:00 [ata_sff]
+root         118  0.0  0.0      0     0 ?        I<   04:24   0:00 [edac-poller]
+root         119  0.0  0.0      0     0 ?        I<   04:24   0:00 [devfreq_wq]
+root         120  0.0  0.0      0     0 ?        S    04:24   0:00 [watchdogd]
+root         123  0.0  0.0      0     0 ?        S    04:24   0:00 [kswapd0]
+root         126  0.0  0.0      0     0 ?        I<   04:24   0:00 [kthrotld]
+root         127  0.0  0.0      0     0 ?        I<   04:24   0:00 [acpi_thermal
+root         128  0.0  0.0      0     0 ?        I<   04:24   0:00 [nvme-wq]
+root         129  0.0  0.0      0     0 ?        I<   04:24   0:00 [nvme-reset-w
+root         130  0.0  0.0      0     0 ?        I<   04:24   0:00 [nvme-delete-
+root         131  0.0  0.0      0     0 ?        S    04:24   0:00 [scsi_eh_0]
+root         132  0.0  0.0      0     0 ?        I<   04:24   0:00 [scsi_tmf_0]
+root         133  0.0  0.0      0     0 ?        I<   04:24   0:00 [ipv6_addrcon
+root         145  0.0  0.0      0     0 ?        I<   04:24   0:00 [kstrp]
+root         151  0.0  0.0      0     0 ?        I<   04:24   0:00 [zswap-shrink
+root         152  0.0  0.0      0     0 ?        I<   04:24   0:00 [kworker/u3:0
+root         163  0.0  0.0      0     0 ?        I<   04:24   0:00 [charger_mana
+root         164  0.0  0.0      0     0 ?        I<   04:24   0:00 [kworker/0:1H
+root         185  0.0  0.0      0     0 ?        I<   04:24   0:00 [dm_bufio_cac
+root         189  0.0  0.0      0     0 ?        S    04:24   0:00 [scsi_eh_1]
+root         190  0.0  0.0      0     0 ?        I<   04:24   0:00 [scsi_tmf_1]
+root         191  0.0  0.0      0     0 ?        S    04:24   0:00 [scsi_eh_2]
+root         192  0.0  0.0      0     0 ?        I<   04:24   0:00 [scsi_tmf_2]
+root         194  0.0  0.0      0     0 ?        I<   04:24   0:00 [cryptd]
+root         249  0.0  0.0      0     0 ?        S<   04:24   0:00 [loop0]
+root         255  0.0  0.0      0     0 ?        S<   04:24   0:00 [loop1]
+root         260  0.0  0.0      0     0 ?        S<   04:24   0:00 [loop2]
+root         265  0.0  0.0      0     0 ?        S<   04:24   0:00 [loop3]
+root         333  0.0  0.1   8132  4804 ?        Ss   04:24   0:00 /usr/sbin/hav
+root         334  0.0  0.3  29064  9828 ?        Ss   04:24   0:00 /usr/lib/syst
+root         337  0.0  0.3  33120 10664 ?        Ss   04:24   0:00 /usr/lib/syst
+root         373  0.0  0.0  78080  1132 ?        Ss   04:24   0:00 /usr/bin/lvme
+root         450  0.0  0.0      0     0 ?        S    04:24   0:00 [irq/18-vmwgf
+root         455  0.0  0.0      0     0 ?        I<   04:24   0:00 [ttm_swap]
+avahi        577  0.0  0.1   6632  3656 ?        Ss   04:24   0:00 avahi-daemon:
+root         578  0.0  0.0   3628  2228 ?        Ss   04:24   0:00 /usr/bin/cron
+dbus         579  0.0  0.1   7816  5080 ?        Ss   04:24   0:01 /usr/bin/dbus
+root         580  0.0  0.6 474112 19164 ?        Ssl  04:24   0:00 /usr/bin/Netw
+polkitd      591  0.0  0.7 1524156 22984 ?       Ssl  04:24   0:00 /usr/lib/polk
+root         602  0.0  0.2  17020  8068 ?        Ss   04:24   0:00 /usr/lib/syst
+avahi        604  0.0  0.0   6452   348 ?        S    04:24   0:00 avahi-daemon:
+root         675  0.0  0.0 151844  1576 ?        Ss   04:24   0:00 gpg-agent --h
+root         694  0.0  0.3 312440 10216 ?        Ssl  04:24   0:00 /usr/bin/Mode
+root         953  0.0  0.1 358484  4236 ?        Ssl  04:24   0:00 /usr/bin/VBox
+root        1229  0.0  0.2 304716  6852 ?        Ssl  04:25   0:00 /usr/bin/ligh
+root        1235  0.0  0.2 234352  6752 ?        Ssl  04:25   0:00 /usr/lib/acco
+root        1243  0.0  2.8 258308 86472 tty7     Ss+  04:25   0:05 /usr/lib/Xorg
+root        1369  0.0  0.2 160860  8296 ?        Sl   04:25   0:00 lightdm --ses
+manjaro     1374  0.0  0.3  18572 10032 ?        Ss   04:25   0:00 /usr/lib/syst
+manjaro     1375  0.0  0.1 112856  3292 ?        S    04:25   0:00 (sd-pam)
+manjaro     1389  0.0  2.1 410816 65644 ?        Ssl  04:25   0:00 xfce4-session
+manjaro     1397  0.0  0.1   6872  4644 ?        Ss   04:25   0:01 /usr/bin/dbus
+manjaro     1410  0.0  0.2 235892  7396 ?        Ssl  04:25   0:00 /usr/lib/gvfs
+manjaro     1415  0.0  0.2 378924  6228 ?        Sl   04:25   0:00 /usr/lib/gvfs
+manjaro     1422  0.0  0.2 304108  6432 ?        Ssl  04:25   0:00 /usr/lib/at-s
+manjaro     1429  0.0  0.1   6592  3948 ?        S    04:25   0:00 /usr/bin/dbus
+manjaro     1431  0.0  0.1 229116  5760 ?        Sl   04:25   0:00 /usr/lib/xfce
+manjaro     1437  0.0  0.2 159732  7168 ?        Sl   04:25   0:00 /usr/lib/at-s
+manjaro     1440  0.0  0.0   5744   444 ?        Ss   04:25   0:00 /usr/bin/ssh-
+manjaro     1445  0.0  0.1 154732  3388 ?        SLs  04:25   0:00 /usr/bin/gpg-
+manjaro     1447  0.0  3.1 702392 96632 ?        Sl   04:25   0:02 xfwm4
+manjaro     1451  0.0  0.4 758544 12868 ?        Ssl  04:25   0:00 /usr/bin/puls
+manjaro     1454  0.0  1.5 316848 48480 ?        Sl   04:25   0:00 xfce4-panel
+manjaro     1460  0.0  0.8 338460 26960 ?        Sl   04:25   0:00 Thunar --daem
+manjaro     1465  0.0  1.3 310872 42576 ?        Sl   04:25   0:00 /usr/lib/xfce
+rtkit       1466  0.0  0.0 152736  2980 ?        SNsl 04:25   0:00 /usr/lib/rtki
+manjaro     1469  0.0  0.8 189872 26736 ?        Sl   04:25   0:00 /usr/lib/xfce
+manjaro     1470  0.0  1.5 505404 47136 ?        Sl   04:25   0:04 /usr/lib/xfce
+manjaro     1473  0.0  1.4 239896 44888 ?        Sl   04:25   0:00 /usr/lib/xfce
+manjaro     1474  0.0  0.2 235220  7136 ?        Sl   04:25   0:00 /usr/lib/puls
+manjaro     1484  0.0  2.2 360548 68976 ?        Sl   04:25   0:01 xfdesktop
+manjaro     1490  0.0  1.4 310856 43828 ?        Ssl  04:25   0:00 /usr/lib/xfce
+manjaro     1507  0.0  1.4 239980 44908 ?        Sl   04:25   0:00 xfce4-clipman
+manjaro     1515  0.0  0.0  12516   336 ?        Ssl  04:25   0:00 xcape -e Supe
+manjaro     1524  0.0  0.3 347572 11440 ?        Ssl  04:25   0:00 /usr/lib/gvfs
+root        1533  0.0  0.4 391616 12460 ?        Ssl  04:25   0:00 /usr/lib/udis
+manjaro     1547  0.0  1.7 512696 54096 ?        Sl   04:25   0:00 /usr/bin/pyth
+manjaro     1548  0.0  0.1 233100  5028 ?        Sl   04:25   0:00 /usr/lib/geoc
+manjaro     1556  0.0  0.1 232040  5236 ?        Ssl  04:25   0:00 /usr/lib/gvfs
+manjaro     1560  0.0  0.1 234280  5896 ?        Ssl  04:25   0:00 /usr/lib/gvfs
+manjaro     1564  0.0  0.2 313048  7500 ?        Ssl  04:25   0:00 /usr/lib/gvfs
+manjaro     1572  0.0  0.2 383556  7980 ?        Sl   04:25   0:00 /usr/lib/gvfs
+manjaro     1579  0.0  0.1 158412  5892 ?        Ssl  04:25   0:00 /usr/lib/gvfs
+manjaro     1583  0.0  0.8 263236 26072 ?        Sl   04:25   0:00 light-locker
+manjaro     1585  0.0  1.1 233460 33776 ?        Sl   04:25   0:01 msm_notifier
+manjaro     1591  0.0  0.0  18136   592 ?        S    04:25   0:00 /usr/bin/VBox
+manjaro     1592  0.0  0.1 150412  4312 ?        Sl   04:25   0:00 /usr/bin/VBox
+manjaro     1595  0.0  1.6 397296 51156 ?        Sl   04:25   0:00 nm-applet
+manjaro     1598  0.0  1.6 256020 49744 ?        Sl   04:25   0:00 pamac-tray
+manjaro     1613  0.0  0.1 155052  5440 ?        Sl   04:25   0:00 /usr/lib/dcon
+manjaro     1614  0.0  0.0  18136   592 ?        S    04:25   0:00 /usr/bin/VBox
+manjaro     1615  0.0  0.0 150240  2420 ?        Sl   04:25   0:00 /usr/bin/VBox
+manjaro     1620  0.0  0.8 189116 25300 ?        Sl   04:25   0:00 /usr/lib/polk
+manjaro     1628  0.0  0.2 233516  8284 ?        Sl   04:25   0:00 xiccd
+manjaro     1629  0.0  0.0  18136   592 ?        S    04:25   0:00 /usr/bin/VBox
+manjaro     1630  0.0  0.0 150756  2452 ?        Sl   04:25   0:10 /usr/bin/VBox
+manjaro     1637  0.0  1.4 240408 43820 ?        Ssl  04:25   0:00 xfce4-power-m
+colord      1644  0.0  0.4 242216 13660 ?        Ssl  04:25   0:00 /usr/lib/colo
+root        1651  0.0  0.3 248556  9632 ?        Ssl  04:25   0:00 /usr/lib/upow
+manjaro     1696  0.0  1.9 329584 60820 ?        Sl   04:25   0:00 /usr/bin/pyth
+manjaro     1705  0.0  0.2  44184  6804 ?        Ss   04:25   0:00 /usr/lib/blue
+manjaro     1792  0.0  0.8 224828 26244 ?        Ssl  04:26   0:00 xfsettingsd -
+root        1920  0.0  0.0      0     0 ?        I    04:39   0:00 [kworker/0:2-
+root        2523  0.0  0.0      0     0 ?        I    09:16   0:00 [kworker/u2:2
+root        2535  0.0  0.0      0     0 ?        I    09:30   0:00 [kworker/u2:0
+root        2544  0.0  0.0      0     0 ?        I    16:56   0:00 [kworker/u2:1
+root        2570  0.0  0.4 285976 15252 ?        Ssl  16:57   0:00 /usr/bin/pama
+root        2584  0.0  0.0      0     0 ?        I    16:57   0:00 [kworker/0:5-
+manjaro     2698  0.0  1.7 339008 53352 ?        Sl   17:05   0:00 /usr/bin/xfce
+manjaro     2702  0.0  0.1   8568  5272 pts/0    Ss   17:05   0:00 bash
+manjaro     2825  0.0  0.1   9348  3680 pts/0    R+   17:27   0:00 ps -aux
+[manjaro@manjaro Assignment_1]$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 04:24 ?        00:00:03 /sbin/init
+root           2       0  0 04:24 ?        00:00:00 [kthreadd]
+root           3       2  0 04:24 ?        00:00:00 [rcu_gp]
+root           4       2  0 04:24 ?        00:00:00 [rcu_par_gp]
+root           6       2  0 04:24 ?        00:00:00 [kworker/0:0H-kblockd]
+root           8       2  0 04:24 ?        00:00:00 [mm_percpu_wq]
+root           9       2  0 04:24 ?        00:00:00 [ksoftirqd/0]
+root          10       2  0 04:24 ?        00:00:00 [rcuc/0]
+root          11       2  0 04:24 ?        00:00:00 [rcu_preempt]
+root          12       2  0 04:24 ?        00:00:00 [rcub/0]
+root          13       2  0 04:24 ?        00:00:00 [migration/0]
+root          14       2  0 04:24 ?        00:00:00 [idle_inject/0]
+root          16       2  0 04:24 ?        00:00:00 [cpuhp/0]
+root          17       2  0 04:24 ?        00:00:00 [kdevtmpfs]
+root          18       2  0 04:24 ?        00:00:00 [netns]
+root          19       2  0 04:24 ?        00:00:00 [rcu_tasks_kthre]
+root          20       2  0 04:24 ?        00:00:00 [kauditd]
+root          21       2  0 04:24 ?        00:00:00 [khungtaskd]
+root          22       2  0 04:24 ?        00:00:00 [oom_reaper]
+root          23       2  0 04:24 ?        00:00:00 [writeback]
+root          24       2  0 04:24 ?        00:00:00 [kcompactd0]
+root          25       2  0 04:24 ?        00:00:00 [ksmd]
+root          26       2  0 04:24 ?        00:00:00 [khugepaged]
+root         114       2  0 04:24 ?        00:00:00 [kintegrityd]
+root         115       2  0 04:24 ?        00:00:00 [kblockd]
+root         116       2  0 04:24 ?        00:00:00 [blkcg_punt_bio]
+root         117       2  0 04:24 ?        00:00:00 [ata_sff]
+root         118       2  0 04:24 ?        00:00:00 [edac-poller]
+root         119       2  0 04:24 ?        00:00:00 [devfreq_wq]
+root         120       2  0 04:24 ?        00:00:00 [watchdogd]
+root         123       2  0 04:24 ?        00:00:00 [kswapd0]
+root         126       2  0 04:24 ?        00:00:00 [kthrotld]
+root         127       2  0 04:24 ?        00:00:00 [acpi_thermal_pm]
+root         128       2  0 04:24 ?        00:00:00 [nvme-wq]
+root         129       2  0 04:24 ?        00:00:00 [nvme-reset-wq]
+root         130       2  0 04:24 ?        00:00:00 [nvme-delete-wq]
+root         131       2  0 04:24 ?        00:00:00 [scsi_eh_0]
+root         132       2  0 04:24 ?        00:00:00 [scsi_tmf_0]
+root         133       2  0 04:24 ?        00:00:00 [ipv6_addrconf]
+root         145       2  0 04:24 ?        00:00:00 [kstrp]
+root         151       2  0 04:24 ?        00:00:00 [zswap-shrink]
+root         152       2  0 04:24 ?        00:00:00 [kworker/u3:0]
+root         163       2  0 04:24 ?        00:00:00 [charger_manager]
+root         164       2  0 04:24 ?        00:00:00 [kworker/0:1H-kblockd]
+root         185       2  0 04:24 ?        00:00:00 [dm_bufio_cache]
+root         189       2  0 04:24 ?        00:00:00 [scsi_eh_1]
+root         190       2  0 04:24 ?        00:00:00 [scsi_tmf_1]
+root         191       2  0 04:24 ?        00:00:00 [scsi_eh_2]
+root         192       2  0 04:24 ?        00:00:00 [scsi_tmf_2]
+root         194       2  0 04:24 ?        00:00:00 [cryptd]
+root         249       2  0 04:24 ?        00:00:00 [loop0]
+root         255       2  0 04:24 ?        00:00:00 [loop1]
+root         260       2  0 04:24 ?        00:00:00 [loop2]
+root         265       2  0 04:24 ?        00:00:00 [loop3]
+root         333       1  0 04:24 ?        00:00:00 /usr/sbin/haveged -w 1024 -v
+root         334       1  0 04:24 ?        00:00:00 /usr/lib/systemd/systemd-jou
+root         337       1  0 04:24 ?        00:00:00 /usr/lib/systemd/systemd-ude
+root         373       1  0 04:24 ?        00:00:00 /usr/bin/lvmetad -f
+root         450       2  0 04:24 ?        00:00:00 [irq/18-vmwgfx]
+root         455       2  0 04:24 ?        00:00:00 [ttm_swap]
+avahi        577       1  0 04:24 ?        00:00:00 avahi-daemon: running [manja
+root         578       1  0 04:24 ?        00:00:00 /usr/bin/crond -n
+dbus         579       1  0 04:24 ?        00:00:01 /usr/bin/dbus-daemon --syste
+root         580       1  0 04:24 ?        00:00:00 /usr/bin/NetworkManager --no
+polkitd      591       1  0 04:24 ?        00:00:00 /usr/lib/polkit-1/polkitd --
+root         602       1  0 04:24 ?        00:00:00 /usr/lib/systemd/systemd-log
+avahi        604     577  0 04:24 ?        00:00:00 avahi-daemon: chroot helper
+root         675       1  0 04:24 ?        00:00:00 gpg-agent --homedir /etc/pac
+root         694       1  0 04:24 ?        00:00:00 /usr/bin/ModemManager
+root         953       1  0 04:24 ?        00:00:00 /usr/bin/VBoxService -f
+root        1229       1  0 04:25 ?        00:00:00 /usr/bin/lightdm
+root        1235       1  0 04:25 ?        00:00:00 /usr/lib/accounts-daemon
+root        1243    1229  0 04:25 tty7     00:00:05 /usr/lib/Xorg :0 -seat seat0
+root        1369    1229  0 04:25 ?        00:00:00 lightdm --session-child 12 1
+manjaro     1374       1  0 04:25 ?        00:00:00 /usr/lib/systemd/systemd --u
+manjaro     1375    1374  0 04:25 ?        00:00:00 (sd-pam)
+manjaro     1389    1369  0 04:25 ?        00:00:00 xfce4-session
+manjaro     1397    1374  0 04:25 ?        00:00:01 /usr/bin/dbus-daemon --sessi
+manjaro     1410    1374  0 04:25 ?        00:00:00 /usr/lib/gvfsd
+manjaro     1415    1374  0 04:25 ?        00:00:00 /usr/lib/gvfsd-fuse /run/use
+manjaro     1422    1374  0 04:25 ?        00:00:00 /usr/lib/at-spi-bus-launcher
+manjaro     1429    1422  0 04:25 ?        00:00:00 /usr/bin/dbus-daemon --confi
+manjaro     1431    1374  0 04:25 ?        00:00:00 /usr/lib/xfce4/xfconf/xfconf
+manjaro     1437    1374  0 04:25 ?        00:00:00 /usr/lib/at-spi2-registryd -
+manjaro     1440       1  0 04:25 ?        00:00:00 /usr/bin/ssh-agent -s
+manjaro     1445    1374  0 04:25 ?        00:00:00 /usr/bin/gpg-agent --supervi
+manjaro     1447    1389  0 04:25 ?        00:00:02 xfwm4
+manjaro     1451    1374  0 04:25 ?        00:00:00 /usr/bin/pulseaudio --daemon
+manjaro     1454    1389  0 04:25 ?        00:00:00 xfce4-panel
+manjaro     1460    1389  0 04:25 ?        00:00:00 Thunar --daemon
+manjaro     1465    1454  0 04:25 ?        00:00:00 /usr/lib/xfce4/panel/wrapper
+rtkit       1466       1  0 04:25 ?        00:00:00 /usr/lib/rtkit-daemon
+manjaro     1469    1454  0 04:25 ?        00:00:00 /usr/lib/xfce4/panel/wrapper
+manjaro     1470    1454  0 04:25 ?        00:00:04 /usr/lib/xfce4/panel/wrapper
+manjaro     1473    1454  0 04:25 ?        00:00:00 /usr/lib/xfce4/panel/wrapper
+manjaro     1474    1451  0 04:25 ?        00:00:00 /usr/lib/pulse/gsettings-hel
+manjaro     1484    1389  0 04:25 ?        00:00:01 xfdesktop
+manjaro     1490    1374  0 04:25 ?        00:00:00 /usr/lib/xfce4/notifyd/xfce4
+manjaro     1507    1389  0 04:25 ?        00:00:00 xfce4-clipman
+manjaro     1515       1  0 04:25 ?        00:00:00 xcape -e Super_L Alt_L F1
+manjaro     1524    1374  0 04:25 ?        00:00:00 /usr/lib/gvfs-udisks2-volume
+root        1533       1  0 04:25 ?        00:00:00 /usr/lib/udisks2/udisksd
+manjaro     1547    1389  0 04:25 ?        00:00:00 /usr/bin/python /usr/bin/blu
+manjaro     1548    1389  0 04:25 ?        00:00:00 /usr/lib/geoclue-2.0/demos/a
+manjaro     1556    1374  0 04:25 ?        00:00:00 /usr/lib/gvfs-mtp-volume-mon
+manjaro     1560    1374  0 04:25 ?        00:00:00 /usr/lib/gvfs-gphoto2-volume
+manjaro     1564    1374  0 04:25 ?        00:00:00 /usr/lib/gvfs-afc-volume-mon
+manjaro     1572    1410  0 04:25 ?        00:00:00 /usr/lib/gvfsd-trash --spawn
+manjaro     1579    1374  0 04:25 ?        00:00:00 /usr/lib/gvfsd-metadata
+manjaro     1583    1389  0 04:25 ?        00:00:00 light-locker
+manjaro     1585    1389  0 04:25 ?        00:00:01 msm_notifier
+manjaro     1591       1  0 04:25 ?        00:00:00 /usr/bin/VBoxClient --clipbo
+manjaro     1592    1591  0 04:25 ?        00:00:00 /usr/bin/VBoxClient --clipbo
+manjaro     1595    1389  0 04:25 ?        00:00:00 nm-applet
+manjaro     1598    1389  0 04:25 ?        00:00:00 pamac-tray
+manjaro     1613    1374  0 04:25 ?        00:00:00 /usr/lib/dconf-service
+manjaro     1614       1  0 04:25 ?        00:00:00 /usr/bin/VBoxClient --seamle
+manjaro     1615    1614  0 04:25 ?        00:00:00 /usr/bin/VBoxClient --seamle
+manjaro     1620    1389  0 04:25 ?        00:00:00 /usr/lib/polkit-gnome/polkit
+manjaro     1628    1389  0 04:25 ?        00:00:00 xiccd
+manjaro     1629       1  0 04:25 ?        00:00:00 /usr/bin/VBoxClient --dragan
+manjaro     1630    1629  0 04:25 ?        00:00:11 /usr/bin/VBoxClient --dragan
+manjaro     1637       1  0 04:25 ?        00:00:00 xfce4-power-manager
+colord      1644       1  0 04:25 ?        00:00:00 /usr/lib/colord
+root        1651       1  0 04:25 ?        00:00:00 /usr/lib/upowerd
+manjaro     1696       1  0 04:25 ?        00:00:00 /usr/bin/python /usr/bin/blu
+manjaro     1705    1374  0 04:25 ?        00:00:00 /usr/lib/bluetooth/obexd
+manjaro     1792       1  0 04:26 ?        00:00:00 xfsettingsd --replace
+root        1920       2  0 04:39 ?        00:00:00 [kworker/0:2-events]
+root        2523       2  0 09:16 ?        00:00:00 [kworker/u2:2-events_power_e
+root        2535       2  0 09:30 ?        00:00:00 [kworker/u2:0-events_unbound
+root        2544       2  0 16:56 ?        00:00:00 [kworker/u2:1-events_unbound
+root        2570       1  0 16:57 ?        00:00:00 /usr/bin/pamac-daemon
+root        2584       2  0 16:57 ?        00:00:00 [kworker/0:5-ata_sff]
+manjaro     2698       1  0 17:05 ?        00:00:01 /usr/bin/xfce4-terminal
+manjaro     2702    2698  0 17:05 pts/0    00:00:00 bash
+manjaro     2830    2702  0 17:28 pts/0    00:00:00 ps -ef
+
+
+
+
+Answer 5:
+[manjaro@manjaro Assignment_1]$ cd dir1
+[manjaro@manjaro dir1]$ touch -t 202501231740 file1
+[manjaro@manjaro dir1]$ touch -t 202501231741 file0
+[manjaro@manjaro dir1]$ touch -t 202501222301 file_a
+[manjaro@manjaro dir1]$ ls
+dir2  file0  file1  file_a  file_link
+[manjaro@manjaro dir1]$ ls -lrt > dir2/answer.txt
+[manjaro@manjaro dir1]$ cd dir2
+[manjaro@manjaro dir2]$ cat answer.txt 
+total 0
+-rw-r--r-- 1 manjaro manjaro  0 Jan 22 23:01 file_a
+lrwxrwxrwx 1 manjaro manjaro 14 Jan 23 17:22 file_link -> dir2/file1.txt
+-rw-r--r-- 1 manjaro manjaro  0 Jan 23 17:40 file1
+-rw-r--r-- 1 manjaro manjaro  0 Jan 23 17:41 file0
+drwxr-xr-x 2 manjaro manjaro 80 Jan 23 17:44 dir2
+[manjaro@manjaro dir2]$ 
+
